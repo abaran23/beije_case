@@ -1,0 +1,22 @@
+.link {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.link:hover::after,
+.link:active::after,
+.link.active::after {
+  width: 100%;
+  transition: width 0.3s;
+}
